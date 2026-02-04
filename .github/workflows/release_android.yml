@@ -34,8 +34,16 @@ jobs:
       - name: Build apk
         run: flutter build apk --no-tree-shake-icons --release
 
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+
       # Upload generated appbundle to the artifacts.
       - uses: ncipollo/release-action@v1
+        if: github.event_name == 'release'
         with:
           artifacts: "build/app/outputs/flutter-apk/app-release.apk"
           replacesArtifacts: true
