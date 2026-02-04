@@ -28,9 +28,18 @@ class SmashFormHelper extends AFormhelper {
   Widget _titleWidget;
   int? _id;
   dynamic _position;
+  Map<String, dynamic>? _cacheDefinitions;
 
   SmashFormHelper(this._id, this._sectionName, this._section, this._titleWidget,
       this._position);
+
+  void setCacheDefinitions(Map<String, dynamic> definitions) {
+    _cacheDefinitions = definitions;
+  }
+
+  Map<String, dynamic>? getCacheDefinitions() {
+    return _cacheDefinitions;
+  }
 
   @override
   Future<bool> init() async {

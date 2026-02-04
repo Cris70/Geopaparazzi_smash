@@ -22,7 +22,8 @@ import 'package:smash/eu/hydrologis/smash/widgets/log_list.dart';
 import 'package:smash/eu/hydrologis/smash/widgets/log_tags.dart';
 import 'package:smash/generated/l10n.dart';
 import 'package:smashlibs/com/hydrologis/flutterlibs/utils/logging.dart';
-import 'package:smashlibs/smashlibs.dart';
+import 'package:smashlibs/smashlibs.dart'
+    hide SmashSelectedReadonlyTags, SmashTagEditor;
 
 /// The log properties page.
 class LogPropertiesWidget extends StatefulWidget {

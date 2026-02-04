@@ -15,7 +15,8 @@ import 'package:smash/eu/hydrologis/smash/widgets/log_list.dart';
 import 'package:smash/eu/hydrologis/smash/widgets/settings.dart';
 import 'package:smash/generated/l10n.dart';
 import 'package:smashlibs/com/hydrologis/flutterlibs/utils/logging.dart';
-import 'package:smashlibs/smashlibs.dart';
+import 'package:smashlibs/smashlibs.dart'
+    hide SmashSelectedReadonlyTags, SmashTagEditor;
 import 'package:flutter_tags_x/flutter_tags_x.dart';
 import 'package:smash/eu/hydrologis/smash/widgets/log_tags.dart';
 

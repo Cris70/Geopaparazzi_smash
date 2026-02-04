@@ -23,7 +23,8 @@ import 'package:smash/eu/hydrologis/smash/widgets/settings/gpslog_settings.dart'
 import 'package:smash/generated/l10n.dart';
 import 'package:smash_import_export_plugins/smash_import_export_plugins.dart';
 import 'package:smashlibs/com/hydrologis/flutterlibs/utils/logging.dart';
-import 'package:smashlibs/smashlibs.dart';
+import 'package:smashlibs/smashlibs.dart'
+    hide SmashSelectedReadonlyTags, SmashTagEditor;
 
 /// Log object dedicated to the list widget containing logs.
 class Log4ListWidget {
