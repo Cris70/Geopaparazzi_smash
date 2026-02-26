@@ -521,6 +521,10 @@ class MainViewWidgetState extends State<MainViewWidget>
       ProjectData? projectData,
       SmashMapState mapState,
       PreferencesState prefsState) {
+    final double bottomInset = MediaQuery.of(context).viewPadding.bottom;
+    final double bottomOffset = bottomInset + 10.0;
+    final double editButtonBottomPadding = bottomInset + 35.0;
+
     var actionsList = [
       if (prefsState.showAddNoteButton)
         SmashUI.makeBackgroundCircle(
@@ -546,14 +550,14 @@ class MainViewWidgetState extends State<MainViewWidget>
     }
 
     return Positioned(
-      bottom: 10, // Adjust spacing from the bottom
+      bottom: bottomOffset,
       left: 10,
       right: 10,
       // color: SmashColors.mainDecorations,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         if (prefsState.showEditingButton)
           Padding(
-            padding: const EdgeInsets.only(bottom: 35.0, right: 10.0),
+            padding: EdgeInsets.only(bottom: editButtonBottomPadding, right: 10.0),
             child: makeEditButton(prefsState),
           ),
         Row(
